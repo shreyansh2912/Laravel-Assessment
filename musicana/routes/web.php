@@ -19,4 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/registration',[AuthController::class,'index'] );
+// Route::post('/regiaster', [])
+
 Route::get('/login',[AuthController::class,'login'] );
+
+Route::get('/home', function() { 
+    return view('home');
+});
