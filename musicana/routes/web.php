@@ -19,9 +19,11 @@ Route::get('/', function () {
 });
 
 Route::get('/registration',[AuthController::class,'index'] );
-// Route::post('/regiaster', [])
+Route::post('/registration',[AuthController::class,'store']);
+
 
 Route::get('/login',[AuthController::class,'login'] );
+Route::post('/login',[AuthController::class,'validate_login'] );
 
 Route::get('/home', function() { 
     return view('home');

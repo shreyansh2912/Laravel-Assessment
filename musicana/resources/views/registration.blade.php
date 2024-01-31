@@ -46,33 +46,36 @@ Purchase:
                         <img src="assets/images/register_img.png" alt="" class="img-fluid" />
                     </div>
                     <div class="ms_register_form">
+                        <form action="" method="post">
+                            @csrf
                         <h2>Register / Sign Up</h2>
-                        <div class="form-group">
-                            <i class="fa_icon form-user" aria-hidden="true"></i>
-                            <input type="text" placeholder="Enter Your Name" class="form-control">
-                            <span class="form_icon">
-                        </span>
-                        </div>
-                        <div class="form-group">
+                            <div class="form-group">
+                                <i class="fa_icon form-user" aria-hidden="true"></i>
+                                <input type="text" name="name" placeholder="Enter Your Name" class="form-control">
+                                <span class="form_icon">
+                                </span>
+                            </div>
+                            <div class="form-group">
                             <i class="fa_icon form-envelope" aria-hidden="true"></i>
-                            <input type="text" placeholder="Enter Your Email" class="form-control">
+                            <input type="text" name="email" placeholder="Enter Your Email" class="form-control">
                             <span class="form_icon">
-                    </span>
+                            </span>
                         </div>
                         <div class="form-group">
                             <i class="fa_icon form-lock" aria-hidden="true"></i>
-                            <input type="password" placeholder="Enter Password" class="form-control">
+                            <input type="password" name="password" placeholder="Enter Password" class="form-control">
                             <span class="form_icon">
-                    </span>
+                            </span>
                         </div>
                         <div class="form-group">
                             <i class=" fa_icon form-lock" aria-hidden="true"></i>
                             <input type="password" placeholder="Confirm Password" class="form-control">
                             <span class="form_icon">
-                    </span>
+                            </span>
                         </div>
-                        <a href="#" class="ms_btn">register now</a>
-                        <p>Already Have An Account? <a href="login" data-toggle="modal" class="ms_modal hideCurrentModel">login here</a></p>
+                            <button style="width:120px; border-radius:0px; height:40px; margin-right:200px; margin-top:400px;" type="submit">Register now</button>
+                        <p style="margin-top: 60px;">Already Have An Account? <a href="login" data-toggle="modal" class="ms_modal hideCurrentModel">login here</a></p>
+                    </form>
                     </div>
                 </div>
             </div>

@@ -49,31 +49,34 @@ Purchase:
                     </div>
                     <div class="ms_register_form">
                         <h2>login / Sign in</h2>
-                        <div class="form-group">
-                            <i class="fa_icon form-envelope" aria-hidden="true"></i>
-                            <input type="text" placeholder="Enter Your Email" class="form-control">
-                            <span class="form_icon">
-                    </span>
-                        </div>
-                        <div class="form-group">
-                            <i class="fa_icon form-lock" aria-hidden="true"></i>
-                            <input type="password" placeholder="Enter Password" class="form-control">
-                            <span class="form_icon">
-                    </span>
-                        </div>
-                        <div class="remember_checkbox" style="margin-left: 100px" >
-                            <label>Keep me signed in
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                        </div>
-                        <a href="profile.html" class="ms_btn" target="_blank">login now</a>
-                        <div class="popup_forgot">
-                            <a href="#">Forgot Password ?</a>
-                        </div>
+                        <form action="" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <i class="fa_icon form-envelope" aria-hidden="true"></i>
+                                <input type="text" name="email" placeholder="Enter Your Email" class="form-control">
+                                <span class="form_icon">
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <i class="fa_icon form-lock" aria-hidden="true"></i>
+                                <input type="password" name="password" placeholder="Enter Password" class="form-control">
+                                <span class="form_icon">
+                                </span>
+                            </div>
+                            <div class="remember_checkbox" style="margin-left: 100px" >
+                                <label>Keep me signed in
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <button style="width:120px; border-radius:0px; height:40px; margin-right:200px; margin-top:350px;" type="submit">Login now</button>
+                            <div class="popup_forgot" style="margin-top: 100px">
+                                <a href="#">Forgot Password ?</a>
+                            </div>
                             
-                        <p>Don't Have An Account? <a href="registration" data-toggle="modal" class="ms_modal1 hideCurrentModel">register here</a></p>
-                    </div>
+                            <p>Don't Have An Account? <a href="registration" data-toggle="modal" class="ms_modal1 hideCurrentModel">register here</a></p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
