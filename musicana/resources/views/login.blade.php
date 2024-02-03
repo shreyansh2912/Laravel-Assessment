@@ -53,7 +53,7 @@ Purchase:
                             @csrf
                             <div class="form-group">
                                 <i class="fa_icon form-envelope" aria-hidden="true"></i>
-                                <input type="text" name="email" placeholder="Enter Your Email" class="form-control">
+                                <input type="text" name="email" placeholder="Enter Your Email" value="{{old('email')}}" class="form-control">
                                 <span class="form_icon">
                                 </span>
                             </div>

@@ -1,7 +1,7 @@
 @extends('Admin-layouts.layouts')
 
 @section('admin')
-{{-- @dd($users[0][]) --}}
+{{-- @dd($users[0][])
 
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
@@ -32,9 +32,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $item)
+                    @foreach ($users as $item) --}}
     {{-- {{$item}} --}}
-                  <tr>
+                  {{-- <tr>
                     <td class="py-1">
                       <img src="../../images/faces/face1.jpg" alt="image"/>
                     </td>
@@ -57,8 +57,8 @@
             </div>
           </div>
         </div>
-      </div>
-@endforeach
+      </div> --}}
+{{-- @endforeach --}}
 
 
 {{-- @forelse($users as $value)

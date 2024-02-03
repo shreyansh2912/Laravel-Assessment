@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use function Laravel\Prompts\alert;
+
 class AuthController extends Controller
 {
     /**
@@ -39,7 +41,7 @@ class AuthController extends Controller
             // return ('Login Success');
             if(auth::user()->roll_as == 1)
             {
-                return("Admin panel");
+                return redirect('admin-dashboard');
             }
             else
             {
@@ -47,12 +49,19 @@ class AuthController extends Controller
             }
         }
         else{
-            return ('Login Denied');
+            echo "<script> alert('Wrong password or email');</script>";
+            return view('/login');
         }
     }
 
     public function store(Request $request ,User $user)
     {
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required|email',
+            'password'=>'required',
+            'Confirm_password'=>'required|same:password'
+        ]);
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;

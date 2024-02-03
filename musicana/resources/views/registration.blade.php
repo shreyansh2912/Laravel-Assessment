@@ -40,7 +40,7 @@ Purchase:
     <div id="myModal" class="modal  centered-modal" role="dialog">
         <div class="modal-dialog register_dialog">
             <!-- Modal content-->
-            <div class="modal-content" style="height: 500px">
+            <div class="modal-content" style="height: 500px; width:1100px; margin-left:-100px;">
                 <div class="modal-body">
                     <div class="ms_register_img">
                         <img src="assets/images/register_img.png" alt="" class="img-fluid" />
@@ -51,26 +51,46 @@ Purchase:
                         <h2>Register / Sign Up</h2>
                             <div class="form-group">
                                 <i class="fa_icon form-user" aria-hidden="true"></i>
-                                <input type="text" name="name" placeholder="Enter Your Name" class="form-control">
+                                <input type="text" name="name" placeholder="Enter Your Name" value="{{old('name')}}" class="form-control">
                                 <span class="form_icon">
+                                </span>
+                                <span style="color: red">
+                                    @error('name')
+                                        {{$message}}
+                                    @enderror
                                 </span>
                             </div>
                             <div class="form-group">
                             <i class="fa_icon form-envelope" aria-hidden="true"></i>
-                            <input type="text" name="email" placeholder="Enter Your Email" class="form-control">
+                            <input type="text" name="email" placeholder="Enter Your Email" value="{{old('email')}}"  class="form-control">
                             <span class="form_icon">
+                            </span>
+                            <span style="color: red">
+                                @error('email')
+                                    {{$message}}
+                                @enderror
                             </span>
                         </div>
                         <div class="form-group">
                             <i class="fa_icon form-lock" aria-hidden="true"></i>
-                            <input type="password" name="password" placeholder="Enter Password" class="form-control">
+                            <input type="password" name="password" placeholder="Enter Password"  class="form-control">
                             <span class="form_icon">
+                            </span>
+                            <span style="color: red">
+                                @error('password')
+                                    {{$message}}
+                                @enderror
                             </span>
                         </div>
                         <div class="form-group">
                             <i class=" fa_icon form-lock" aria-hidden="true"></i>
-                            <input type="password" placeholder="Confirm Password" class="form-control">
+                            <input type="password" name="Confirm_password" placeholder="Confirm Password" class="form-control">
                             <span class="form_icon">
+                            </span>
+                            <span style="color: red">
+                                @error('Confirm_password')
+                                    {{$message}}
+                                @enderror
                             </span>
                         </div>
                             <button style="width:120px; border-radius:0px; height:40px; margin-right:200px; margin-top:400px;" type="submit">Register now</button>

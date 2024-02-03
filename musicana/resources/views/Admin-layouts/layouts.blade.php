@@ -245,6 +245,8 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+  <div class="main-panel">
+    <div class="content-wrapper">
   @yield('admin')
   <!-- plugins:js -->
   <script src="admin-Assets/vendors/base/vendor.bundle.base.js"></script>
