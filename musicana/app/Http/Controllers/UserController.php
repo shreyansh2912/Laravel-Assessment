@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\rc;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class adminController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin-pages/admin-dashboard');
+        $users = User::all();
+        return view('admin-pages/admin-User',compact('users'));
     }
 
     /**
@@ -35,15 +35,15 @@ class adminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(rc $rc)
+    public function show(string $id)
     {
-        
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(rc $rc)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class adminController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, rc $rc)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class adminController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(rc $rc)
+    public function destroy(string $id)
     {
         //
     }

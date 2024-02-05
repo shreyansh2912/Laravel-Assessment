@@ -168,27 +168,27 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{'admin-dashboard'}}">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="users">
+            <a class="nav-link" href="{{'admin-user'}}">
               <i class="mdi mdi-account-multiple menu-icon"></i>
               <span class="menu-title">Users</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="mdi mdi-circle-outline menu-icon"></i>
-              <span class="menu-title">UI Elements</span>
+              <i class="mdi mdi-headphones menu-icon"></i>
+              <span class="menu-title">Songs</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{'admin-SongList'}}">Song List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{'admin-addSongs'}}">Add Songs</a></li>
               </ul>
             </div>
           </li>
@@ -240,14 +240,32 @@
           </li>
         </ul>
       </nav>
-      <!-- main-panel ends -->
+       <!-- partial -->
+       <div class="main-panel">
+        <div class="content-wrapper"> 
+          <div class="row">
+            @yield('admin')
+          </div>
+        </div>
+            <footer class="footer">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard  </a> templates</span>
+              </div>
+              </footer>
+              <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+          </div>
+          <!-- page-body-wrapper ends -->
+        </div>
+        <!-- container-scroller -->
+      
+      {{-- <!-- main-panel ends -->
     </div>
     <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <div class="main-panel">
-    <div class="content-wrapper">
-  @yield('admin')
+  <!-- container-scroller --> --}}
   <!-- plugins:js -->
   <script src="admin-Assets/vendors/base/vendor.bundle.base.js"></script>
   <!-- endinject -->

@@ -1,6 +1,9 @@
 @extends('layouts.layouts');
 
 @section('data')
+@foreach ($data as $item)
+    {{$item->singer}}
+@endforeach
             <!---Banner--->
             <div class="ms-banner">
                 <div class="container-fluid">

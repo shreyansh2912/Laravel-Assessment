@@ -1,7 +1,8 @@
 @extends('Admin-layouts.layouts')
 
 @section('admin')
-{{-- @dd($users[0][])
+
+{{-- @dd($users[0]) --}}
 
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
@@ -24,50 +25,51 @@
                       Progress
                     </th>
                     <th>
-                      Amount
+                      email
                     </th>
                     <th>
-                      Deadline
+                      created at
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $item) --}}
-    {{-- {{$item}} --}}
-                  {{-- <tr>
+                    @foreach ($users as $item) 
+                        {{-- {{$item}} --}}
+                  <tr>
                     <td class="py-1">
                       <img src="../../images/faces/face1.jpg" alt="image"/>
                     </td>
                     <td>
-                      Herman Beck
+                      {{$item->name}}
                     </td>
                     <td>
-                      <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      {{-- <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> --}}
                       </div>
                     </td>
                     <td>
-                      $ 77.99
+                      {{$item->email}}
                     </td>
                     <td>
-                      May 15, 2015
+                      {{$item->created_at}}
                     </td>
+                  </tr>
+ @endforeach
+
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-      </div> --}}
-{{-- @endforeach --}}
+      </div>
 
 
 {{-- @forelse($users as $value)
 
-{{$value->name}}
 
 @empty
     
 
-@endforelse
+@endforelse --}}
 
-@endsection --}}
+@endsection

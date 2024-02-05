@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\rc;
-use App\Models\User;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 
-class adminController extends Controller
+class GenreController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin-pages/admin-dashboard');
+        //
     }
 
     /**
@@ -35,15 +34,15 @@ class adminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(rc $rc)
+    public function show(Genre $genre)
     {
-        
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(rc $rc)
+    public function edit(Genre $genre)
     {
         //
     }
@@ -51,7 +50,7 @@ class adminController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, rc $rc)
+    public function update(Request $request, Genre $genre)
     {
         //
     }
@@ -59,7 +58,7 @@ class adminController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(rc $rc)
+    public function destroy(Genre $genre)
     {
         //
     }
