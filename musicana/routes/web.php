@@ -23,10 +23,10 @@ Route::get('/', function () {
 });
 
 Route::get('/ragistar',[AuthController::class,'index']);
-Route::post('/ragistar',[AuthController::class,'store'])->middleware('auth');
+Route::post('/ragistar',[AuthController::class,'store']);
 
 
-Route::get('/login',[AuthController::class,'login'] )   ;
+Route::get('/login',[AuthController::class,'login'] );
 Route::post('/login',[AuthController::class,'validate_login'] );
 
 Route::get('/admin-dashboard',[adminController::class,'index']);
@@ -37,7 +37,10 @@ Route::get('/admin-SongList',[SongsController::class,'list']);
 
 Route::put('/admin-SongList',[SongsController::class,'list']);
 
-Route::delete('/admin-SongList/{id?}',[SongsController::class,'destroy']);
+Route::get('/delete-song/{id?}',[SongsController::class,'destroy']);
+
+Route::get('/update-song/{id?}',[SongsController::class,'edit']);
+Route::post('/update-song/{id?}',[SongsController::class,'update']);
 
 Route::get('/admin-addSongs',[SongsController::class,'index']);
 Route::post('/admin-addSongs',[SongsController::class,'store']);

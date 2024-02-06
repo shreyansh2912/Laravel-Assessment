@@ -38,16 +38,12 @@
                             <td><img style="border-radius: 0%; width:100px; height:100px;" src="{{asset('storage/uploads/').("/").$value->image}}" alt=""></td>
                             <td>{{$value->created_at}}</td>
                             <td>
-                                <form action="" method="post">
-                                    @csrf
-                                    @method('put')
-                                </form>
+                                <a href="{{url('update-song',$value->id)}}">
                                     <button type="button" class="btn btn-primary" style="width: 74px; height:30px" value="{{$value->id}}">Edit</button><br><br>
-                                <form action="" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-danger" style="height: 30px " value="{{$value->id}}">Delete</button>
-                                </form>   
+                                </a>
+                                    <a href="{{url('delete-song',$value->id)}}">
+                                        <button type="submit" class="btn btn-danger" style="height: 30px ">Delete</button>
+                                    </a>
                             </td>
                         </tr>
 @endforeach
