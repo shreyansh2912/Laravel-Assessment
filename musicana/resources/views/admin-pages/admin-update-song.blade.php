@@ -5,7 +5,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Add songs</h4>
+        <h4 class="card-title">Update songs here</h4>
         <form action="" method="post" class="forms-sample" enctype="multipart/form-data" >
             @csrf
           <div class="form-group">
@@ -15,7 +15,7 @@
                       {{$message."*"}}
                   @enderror
               </span>
-            <input type="text" name="song_name" class="form-control" id="exampleInputName1" value="{{old('song_name')}}" placeholder="Song name">
+            <input type="text" name="song_name" class="form-control" id="exampleInputName1" value="{{$data->song_name}}" placeholder="Song name">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail3">Artist</label><br>
@@ -24,7 +24,7 @@
                     {{$message."*"}}
                 @enderror
             </span>
-            <input type="text" name="singer" class="form-control" id="exampleInputEmail3" value="{{old('singer')}}" placeholder="Singer name">
+            <input type="text" name="singer" class="form-control" id="exampleInputEmail3" value="{{$data->singer}}" placeholder="Singer name">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword4">Album name</label><br>
@@ -33,7 +33,7 @@
                     {{$message."*"}}
                 @enderror
             </span>
-            <input type="text" name="album" class="form-control" id="exampleInputPassword4" value="{{old('album')}}" placeholder="Album name">
+            <input type="text" name="album" class="form-control" id="exampleInputPassword4" value="{{$data->album}}" placeholder="Album name">
           </div>
           <div class="form-group">
             <label for="exampleSelectGender">Genre</label><br>
@@ -43,7 +43,7 @@
                 @enderror
             </span>
               <select name="genre" class="form-control" id="exampleSelectGender" value="">
-                <option value=""></option>
+                <option value="{{$data->genre}}">{{$data->genre}}</option>
                 <option value="romentic">Romentic</option>
                 <option value="sad">Sad</option>
                 <option value="bass">Bass</option>
@@ -54,21 +54,23 @@
             </div>
           <div class="form-group">
             <label>Song upload here</label><br>
+            <audio controls src="{{asset('storage/uploads'.'/'.$data->song_file)}}"></audio><br>
             <span style="color: red">
                 @error('song_file')
                     {{$message."*"}}
                 @enderror
             </span><br>
-            <input name="song_file" type="file" accept=".mp3" multiple name="song" >
+                    <input name="song_file" type="file" accept=".mp3" multiple value="{{$data->song_file}}" >
           </div>
           <div class="form-group">
-            <label>Thumbnail upload here</label><br>
+            <label>Thumbnail Image</label><br>
+            <img style="width: 200px;" src="{{asset('storage/uploads'."/".$data->image)}}" alt=""><br>
             <span style="color: red">
                 @error('image')
                     {{$message."*"}}
                 @enderror
             </span><br>
-            <input name="image" type="file" accept=".jpg,.png" name="song" >
+            <input name="image" type="file" accept=".jpg,.png" value="{{$data->image}}" >
           </div>
           <button type="submit" class="btn btn-primary me-2">Submit</button>
           <button class="btn btn-light">Cancel</button>
@@ -76,5 +78,5 @@
       </div>
     </div>
   </div>
-
+  
 @endsection

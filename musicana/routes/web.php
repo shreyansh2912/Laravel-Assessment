@@ -25,7 +25,6 @@ Route::get('/', function () {
 Route::get('/ragistar',[AuthController::class,'index']);
 Route::post('/ragistar',[AuthController::class,'store']);
 
-
 Route::get('/login',[AuthController::class,'login'] );
 Route::post('/login',[AuthController::class,'validate_login'] );
 
@@ -40,11 +39,9 @@ Route::put('/admin-SongList',[SongsController::class,'list']);
 Route::get('/delete-song/{id?}',[SongsController::class,'destroy']);
 
 Route::get('/update-song/{id?}',[SongsController::class,'edit']);
-Route::post('/update-song/{id?}',[SongsController::class,'update']);
+// Route::post('/update-song/{id?}',[SongsController::class,'update']);
 
 Route::get('/admin-addSongs',[SongsController::class,'index']);
 Route::post('/admin-addSongs',[SongsController::class,'store']);
-
-// Route::get('/admin-dashboard',[adminController::class,'show']);
 
 Route::get('/home',[HomeController::class,'index']);

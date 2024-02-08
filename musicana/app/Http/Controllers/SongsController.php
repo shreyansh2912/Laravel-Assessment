@@ -75,11 +75,11 @@ class SongsController extends Controller
     public function edit(string $id)
     {
         $data = Songs::find($id);
-        @dd($data);
-        return view('update-song',compact('data'));
+        // @dd($data);
+        return view('admin-pages/admin-update-song',compact('data'));
     }
 
-    /**
+    /** 
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
@@ -93,7 +93,6 @@ class SongsController extends Controller
      */
     public function destroy(string $id)
     {
-        // @dd($id);
         Songs::destroy($id);
         return redirect('/admin-SongList');
     }

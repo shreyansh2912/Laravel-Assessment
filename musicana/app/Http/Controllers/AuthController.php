@@ -35,11 +35,11 @@ class AuthController extends Controller
     public function validate_login(Request $request)
     {
         $request->validate(['email'=>'required','password'=>'required']);
-        $creential = $request->only('email','password','roll_as');
+        $crdential = $request->only('email','password','roll_as');
 
-        if(Auth::attempt($creential)){
+        if(Auth::attempt($crdential)){
             // return ('Login Success');
-            if(auth::user()->roll_as == 1)
+            if(auth::users()->roll_as == 1)
             {
                 return redirect('admin-dashboard');
             }
