@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Songs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -62,5 +63,14 @@ class HomeController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function api(){
+        $api  =  Http::get('https://api.soundcloud.com')['nazme'];
+        // $jiosaavn = require('jiosaavnapi');
+        echo "<pre>";
+        // echo $jiosaavn;
+        print_r( $api);
+        // echo $api[0];    
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/register',[AuthController::class,'index']);
+Route::get('/login',[AuthController::class,'login']);
+
+
+// Route::resource('posts', 'PostController');
+// Route::resource("/posts","\App\Http\Controllers\PostController");
+// Route::get("/posts",[PostController::class,'index']);
+
+
+Route::get("/form",function(){
+    return view("layout.Author.form");
+}
+);
 

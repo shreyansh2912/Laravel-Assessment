@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/ragistar',[AuthController::class,'index']);
 Route::post('/ragistar',[AuthController::class,'store']);
@@ -45,3 +45,5 @@ Route::get('/admin-addSongs',[SongsController::class,'index']);
 Route::post('/admin-addSongs',[SongsController::class,'store']);
 
 Route::get('/home',[HomeController::class,'index']);
+// Route::get('/api', [HomeController::class,'api'] );
+

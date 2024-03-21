@@ -34,7 +34,7 @@
                             <td>{{$value->singer}}</td>
                             <td>{{$value->album}}</td>
                             <td>{{$value->genre}}</td>
-                            <td> <audio controls  src="{{asset('storage/uploads/').("/").$value->song_file}}" alt=""   ></audio></td>
+                            <td> <audio id="audio" controls src="{{asset('storage/uploads/').("/").$value->song_file}}" alt=""   ></audio></td>
                             <td><img style="border-radius: 0%; width:100px; height:100px;" src="{{asset('storage/uploads/').("/").$value->image}}" alt=""></td>
                             <td>{{$value->created_at}}</td>
                             <td>
@@ -46,6 +46,9 @@
                                     </a>
                             </td>
                         </tr>
+                        <script>
+                            console.log(document.getElementsById("audio").innertext);
+                        </script>
 @endforeach
 
                     </tbody>
@@ -54,4 +57,5 @@
         </div>
     </div>
 </div>
+
 @endsection

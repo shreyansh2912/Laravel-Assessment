@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Buzz\Message\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 use function Laravel\Prompts\alert;
 
@@ -36,7 +38,7 @@ class AuthController extends Controller
     {
         $request->validate(['email'=>'required','password'=>'required']);
         $crdential = $request->only('email','password','roll_as');
-
+        // $crdential->withCookie('email',$request->email);
         if(Auth::attempt($crdential)){
             // return ('Login Success');
             if(auth::users()->roll_as == 1)
@@ -67,7 +69,8 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->password = $request->password;
         $user->save();
-        return view('home');
+        // Cookie::queue(cookie::make('name',$request->name,5000));
+        return redirect('home');
     }
 
     /**
@@ -75,7 +78,7 @@ class AuthController extends Controller
      */
     public function show( $cr)
     {
-        //
+        
     }
 
     /**
