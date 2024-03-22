@@ -172,6 +172,18 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="users">
+              <i class="mdi mdi-account menu-icon"></i>
+              <span class="menu-title">Users</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="author">
+              <i class="mdi mdi-account menu-icon"></i>
+              <span class="menu-title">Authors Lists</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-circle-outline menu-icon"></i>
               <span class="menu-title">UI Elements</span>

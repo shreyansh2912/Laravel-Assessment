@@ -1,28 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class AdminController extends Controller
+class ApiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = User::where("roll_as", 0)->get();
-        
-        return view('Admin/dashboard',compact('data'));
-    }
-    public function author_list()
-    {
-        // $data = DB::table("users")->select("*")->where("roll_as","=",1)->get();
-        // @dd($data);
-        $data = User::where("roll_as", 1)->get();
-        return view('Admin/author',compact('data'));
+        //
     }
 
     /**
@@ -38,7 +28,12 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'author_name'=>"required",
+            'title'=>'required',
+            'img'=>'required'
+        ]);
+        p($request->all());
     }
 
     /**

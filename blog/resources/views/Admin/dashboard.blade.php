@@ -17,14 +17,16 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($data as $item)
+                    
                 <tr>
-                    {{$data}}
-                    {{-- <td>{{$data->id}}</td>
-                    <td>{{$data->username}}</td>
-                    <td>{{$data->email}}</td>
-                    <td>{{$data->roll_as}}</td>
-                    <td>{{$data->created_at}}</td> --}}
+                  <td>{{$item->id}}</td>
+                  <td>{{$item->username}}</td>
+                  <td>{{$item->email}}</td>
+                  <td>{{$item->roll_as}}</td>
+                  <td>{{$item->created_at}}</td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

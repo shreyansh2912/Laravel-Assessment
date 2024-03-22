@@ -35,7 +35,7 @@ Route::get('home',[HomeController::class,'index']);
 Route::get('Author/dashboard',[AuthorController::class,'index']);
 
 Route::prefix('admin')->middleware(['auth'])->group(function(){
-    Route::get('/dashboard',[AdminController::class,'index']);
+    Route::get('/users',[AdminController::class,'index']);
     Route::get('/author',[AdminController::class,'author_list']);
 });
 // Route::prefix('/Admin',function(){
