@@ -1433,7 +1433,7 @@
     <div class="widget social-links">
       <h3 class="block-title"><span>Follow us</span></h3>
       <ul class="social-list">
-
+        
         <li class="social-facebook">
           <a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Facebook">
             <i class="fa fa-facebook"></i>

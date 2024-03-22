@@ -773,15 +773,23 @@
                   </ul><!-- dropdown-menu -->
                 </li><!-- .dropdown .menu-color1 -->
                 <!-- End Dropdown List Menu -->
-                
               </ul><!-- .nav .navbar-nav -->
+              @guest
+              <a href="login" >
+                <button class="tags-widget"style="background-color:#FF6600; margin-top: 10PX;height:30px;width:100px;color:aliceblue;font-weight:900;border-radius:5px;">Login</button>
+              </a>
+              <a href="register" >
+                <button class="tags-widget"style="background-color:#FF6600; margin-top: 10PX;height:30px;width:100px;color:aliceblue;font-weight:900;border-radius:5px;">Register</button>
+              </a>
+              @else
+              <a href="logout" >
+                <button class="tags-widget"style="background-color:#FF6600; margin-top: 10PX;height:30px;width:100px;color:aliceblue;font-weight:900;border-radius:5px;">LogOut</button>
+              </a>
+              @endguest
             </div><!-- .navbar-collapse -->              <!-- End Navigation Menu -->
 
               <div class="header-right">
                 <div class="social-icons">
-                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a>
-                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter fa-lg"></i></a>
-                  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus fa-lg"></i></a>
                   <!-- Only for Fixed Sidebar Layout -->
                   <a href="#" class="fixed-button navbar-toggle" id="fixed-button">
                     <i></i>
@@ -1036,6 +1044,54 @@
                 <li><a href="index.html#footer">Footer Style 1</a></li>
                 <li><a href="footer-style2.html#footer">Footer Style 2</a></li>
               </ul>
+            </li><!-- .dropdown-submenu -->
+  
+            <li>
+              <a href="#">Pages</a>
+              <ul>
+                <li><a href="page.html">About Page</a></li>
+                <li><a href="page_contact.html">Contact Page</a></li>
+                <li><a href="page_author.html">Author page</a></li>
+                <li><a href="page_tags.html">Tags page</a></li>
+                <li><a href="page_search.html">Search page</a></li>
+                <li><a href="page_404.html">404 page</a></li>
+              </ul>
+            </li><!-- .dropdown-submenu -->
+  
+            <li>
+              <a href="#">Posts</a>
+              <ul>
+                <li><a href="post_simple.html">Simple Post</a></li>
+                <li><a href="post_review.html">Review Post</a></li>
+                <li><a href="post_parallax.html">Parallax post</a></li>
+                <li><a href="post_fullwidth.html">Full Width Post</a></li>
+                <li><a href="post_fixed.html">Fixed Sidebar Post</a></li>
+                <li><a href="post_slider.html">Gallery Post</a></li>
+                <li><a href="post_video.html">Video Post</a></li>
+              </ul>
+            </li><!-- .dropdown-submenu -->
+  
+            <li>
+              <a href="#">Category Layouts</a>
+              <ul>
+                <li><a href="blog_classic.html">Classic blog</a></li>
+                <li><a href="blog_modern.html">Modern blog</a></li>
+                <li><a href="grid_sidebar.html">Grid blog</a></li>
+                <li><a href="minimal_blog.html">Minimal blog</a></li>
+                <li><a href="fixed_blog.html">Fixed sidebar blog</a></li>
+                <li><a href="big_blog.html">Left big column blog</a></li>
+              </ul>
+            </li><!-- .dropdown-submenu -->
+  
+            <li><a href="page_typography.html">Typography</a></li>
+            <li><a href="page_shortcodes.html">Shortcodes</a></li>
+          </ul><!-- dropdown-menu -->
+        </li>
+        <li>
+          <a href="#">Login</a>
+          <ul>
+            <li></li>
+          </ul>
             </li><!-- .dropdown-submenu -->
   
             <li>
